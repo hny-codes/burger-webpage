@@ -33,6 +33,10 @@
       --ring: 222.2 84% 4.9%;
 
       --radius: 0.5rem;
+
+      --clr-primary-01: #FFAF68;
+      --clr-primary-02: #FF7A04;
+      --clr-white: #FF7A04;
     }
 
     .dark {
