@@ -37,6 +37,8 @@
       --clr-primary-01: #FFAF68;
       --clr-primary-02: #FF7A04;
       --clr-white: #FF7A04;
+      --max-w: 1380px;
+
     }
 
     .dark {
@@ -76,5 +78,15 @@
     }
     body {
       @apply bg-background text-foreground;
+    }
+  }
+
+  @layer components {
+    .menu-bar-top {
+      @apply w-10 h-1.5 bg-white rounded-full ;
+    }
+
+    .menu-bar-bottom {
+      @apply w-6 h-1.5 bg-white rounded-full
     }
   }
