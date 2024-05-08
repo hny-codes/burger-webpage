@@ -63,7 +63,9 @@ export default function HeroText() {
             <p className='text-xl font-bold'>
               Crispy, Crunchy, Veggie Deliciousness!
             </p>
-            <h1 className='text-5xl font-bold'>Burgers That Love the Earth!</h1>
+            <h1 className='text-5xl font-bold leading-snug'>
+              Burgers That Love the Earth!
+            </h1>
           </div>
           <div className='flex flex-col md:flex-row items-center justify-center gap-4 mt-6'>
             <Button className='bg-white text-[--clr-primary-02] px-8 py-6 font-medium text-xl'>
