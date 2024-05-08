@@ -6,14 +6,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   const handleMenu = () => {
     setMenu(!menu);
   };
 
   return (
-    <nav className='font-poppins text-white '>
+    <nav className='font-poppins text-white fixed w-full z-50 top-0'>
       <div className='flex items-center justify-between p-4 lg:max-w-[--max-w] lg:mx-auto'>
         <div className={`flex items-center gap-2 ${menu ? "z-50" : ""}`}>
           <Image
