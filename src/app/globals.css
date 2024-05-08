@@ -93,6 +93,8 @@
 
     /* Hero Review Card */
     .card-behind {
-      @apply before:absolute before:w-[204px] before:md:w-[304px] before:h-[100px] before:md:h-[144px] before:bg-white/75 before:-z-10 before:-rotate-6 before:rounded-lg
+      @apply before:absolute before:w-[204px] before:h-[100px] before:bg-white/75 before:-z-10 before:-rotate-6 before:rounded-xl
+      before:xl:w-[304px]
+      before:xl:h-[131px]
     }
   }
