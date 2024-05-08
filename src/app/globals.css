@@ -34,9 +34,9 @@
 
       --radius: 0.5rem;
 
-      --clr-primary-01: #FFAF68;
+      --clr-primary-01: #FFCDA2;
       --clr-primary-02: #FF7A04;
-      --clr-white: #FF7A04;
+      --clr-primary-03: #FF9131;
       --max-w: 1380px;
 
     }
@@ -82,11 +82,17 @@
   }
 
   @layer components {
+    /* Nav menu */
     .menu-bar-top {
       @apply w-10 h-1.5 bg-white rounded-full ;
     }
 
     .menu-bar-bottom {
       @apply w-6 h-1.5 bg-white rounded-full
+    }
+
+    /* Hero Review Card */
+    .card-behind {
+      @apply before:absolute before:w-[204px] before:md:w-[304px] before:h-[100px] before:md:h-[144px] before:bg-white/75 before:-z-10 before:-rotate-6 before:rounded-lg
     }
   }
