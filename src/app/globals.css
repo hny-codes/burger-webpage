@@ -97,4 +97,16 @@
       before:xl:w-[304px]
       before:xl:h-[131px]
     }
+
+    /* Burger rounded corner */
+    .card-round {
+      @apply relative before:bg-[--clr-primary-02] before:absolute
+      before:h-8 before:w-8 before:top-6 before:-left-6 before:rounded-[-200px]
+      before:-rotate-90 before:-z-10;
+    }
+
+    /* https://stackoverflow.com/questions/4012085/invert-rounded-corner-in-css */
+    .card-round::before {
+      -webkit-mask-image: radial-gradient(circle 50px at 0 0, transparent 0, transparent 25px, black 21px); 
+    }
   }
