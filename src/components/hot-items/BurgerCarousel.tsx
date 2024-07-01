@@ -32,7 +32,7 @@ export default function BurgerCarousel() {
 
   return (
     <div className='px-20 w-full mx-auto max-w-[500px] sm:max-w-none'>
-      <Carousel setApi={setApi} className=''>
+      <Carousel setApi={setApi} className='cursor-pointer'>
         <CarouselContent className='py-12'>
           {data.map((burger, idx) => (
             <CarouselItem
