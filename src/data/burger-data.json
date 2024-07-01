@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Veg Crispy Burger",
+        "price": 250.00,
+        "image": "/images/burger/burger1.png"
+    },
+    {
+        "name": "Hot Crispy Burger",
+        "price": 250.00,
+        "image": "/images/burger/burger2.png"
+    },
+    {
+        "name": "Veg Vegy Burger",
+        "price": 250.00,
+        "image": "/images/burger/burger3.png"
+    },
+    {
+        "name": "Veg Crispy Burger",
+        "price": 250.00,
+        "image": "/images/burger/burger4.png"
+    },
+    {
+        "name": "Unique Crispy Burger",
+        "price": 250.00,
+        "image": "/images/burger/burger1.png"
+    },
+    {
+        "name": "Famous Veggie Burger",
+        "price": 250.00,
+        "image": "/images/burger/burger4.png"
+    },
+    {
+        "name": "Vegan Veggie Burger",
+        "price": 250.00,
+        "image": "/images/burger/burger2.png"
+    }
+]
