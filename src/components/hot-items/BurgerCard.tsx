@@ -17,8 +17,8 @@ type Props = {
 
 export default function BurgerCard({ name, price, image }: Props) {
   return (
-    <Card className='bg-[--clr-primary-02] font-poppins font-medium text-white w-fit rounded-2xl relative border-none flex flex-col '>
-      <CardContent className='p-0 px-4 self-center'>
+    <Card className='bg-[--clr-primary-02] font-poppins font-medium text-white w-fit rounded-2xl relative border-none'>
+      <CardContent className='p-0 px-4 flex items-center justify-center aspect-square'>
         <Image
           className='drop-shadow-2xl '
           src={image}
