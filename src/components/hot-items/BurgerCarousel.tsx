@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Carousel,
@@ -7,10 +7,10 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@/components/ui/carousel";
-import { useState, useEffect } from "react";
-import BurgerCard from "./BurgerCard";
-import data from "@/data/burger-data.json";
+} from '@/components/ui/carousel';
+import { useState, useEffect } from 'react';
+import BurgerCard from './BurgerCard';
+import data from '@/data/burger-data.json';
 
 export default function BurgerCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -25,19 +25,19 @@ export default function BurgerCarousel() {
     setCurrent(api.selectedScrollSnap() + 1);
     setView(api.slidesInView().length);
 
-    api.on("select", () => {
+    api.on('select', () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
 
   return (
     <div className='px-20 w-full mx-auto max-w-[500px] sm:max-w-none'>
-      <Carousel setApi={setApi} className='cursor-pointer'>
-        <CarouselContent className='py-12'>
+      <Carousel setApi={setApi} className='cursor-pointer xl:px-20'>
+        <CarouselContent className='py-12 '>
           {data.map((burger, idx) => (
             <CarouselItem
               key={idx}
-              className='sm:basis-1/2 md:basis-1/3 xl:basis-1/4 '
+              className='sm:basis-1/2 md:basis-1/3 xl:basis-1/4 sm:odd:pt-32'
             >
               <BurgerCard
                 price={burger.price}
@@ -47,8 +47,8 @@ export default function BurgerCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className='w-10 xl:w-20 h-10 xl:h-20' />
+        <CarouselNext className='w-10 xl:w-20 h-10 xl:h-20' />
       </Carousel>
       {/* <div>
         <p>Slides {current} out of {count} | Views: {view}</p>
