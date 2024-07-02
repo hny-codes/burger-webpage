@@ -2,7 +2,7 @@ import BurgerCarousel from './BurgerCarousel';
 
 export default function HotSection() {
   return (
-    <section className='mt-20 md:mt-96 md:pt-20 mb-40 font-poppins text-white'>
+    <section className='mt-20 md:mt-96 md:pt-20 mb-40 font-poppins text-white max-w-[--max-w] mx-auto'>
       <div>
         <div className='text-center uppercase space-y-10 px-8'>
           <h2 className=' font-semibold text-3xl lg:text-5xl'>— Hot Items —</h2>
