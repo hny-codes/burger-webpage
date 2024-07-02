@@ -11,19 +11,20 @@ import {
 import { useState, useEffect } from 'react';
 import BurgerCard from './BurgerCard';
 import data from '@/data/burger-data.json';
+import DotButton from './DotButton';
 
 export default function BurgerCarousel() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const [view, setView] = useState(0);
+  // const [view, setView] = useState(0);
 
   useEffect(() => {
     if (!api) return;
 
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
-    setView(api.slidesInView().length);
+    // setView(api.slidesInView().length);
 
     api.on('select', () => {
       setCurrent(api.selectedScrollSnap() + 1);
@@ -50,9 +51,11 @@ export default function BurgerCarousel() {
         <CarouselPrevious className='w-10 xl:w-20 h-10 xl:h-20' />
         <CarouselNext className='w-10 xl:w-20 h-10 xl:h-20' />
       </Carousel>
-      {/* <div>
-        <p>Slides {current} out of {count} | Views: {view}</p>
-      </div> */}
+      <div className='flex gap-4 mt-6 justify-center'>
+        {[...Array(count)].map((_, idx) => (
+          <DotButton key={idx} idx={idx} api={api} current={current} />
+        ))}
+      </div>
     </div>
   );
 }
