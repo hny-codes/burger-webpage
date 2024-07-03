@@ -1,116 +1,120 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 222.2 84% 4.9%;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-      --card: 0 0% 100%;
-      --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-      --primary: 222.2 47.4% 11.2%;
-      --primary-foreground: 210 40% 98%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
-      --radius: 0.5rem;
+    --radius: 0.5rem;
 
-      --clr-primary-01: #FFCDA2;
-      --clr-primary-02: #FF7A04;
-      --clr-primary-03: #FF9131;
-      --clr-primary-04: #F47200;
-      --clr-primary-05: #FFAF68;
-      
-      --clr-persona: #FF6947;
-      --max-w: 1540px;
+    --clr-primary-01: #ffcda2;
+    --clr-primary-02: #ff7a04;
+    --clr-primary-03: #ff9131;
+    --clr-primary-04: #f47200;
+    --clr-primary-05: #ffaf68;
 
-    }
-
-    .dark {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
-
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
-
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
-
-      --primary: 210 40% 98%;
-      --primary-foreground: 222.2 47.4% 11.2%;
-
-      --secondary: 217.2 32.6% 17.5%;
-      --secondary-foreground: 210 40% 98%;
-
-      --muted: 217.2 32.6% 17.5%;
-      --muted-foreground: 215 20.2% 65.1%;
-
-      --accent: 217.2 32.6% 17.5%;
-      --accent-foreground: 210 40% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 217.2 32.6% 17.5%;
-      --input: 217.2 32.6% 17.5%;
-      --ring: 212.7 26.8% 83.9%;
-    }
+    --clr-persona: #ff6947;
+    --max-w: 1540px;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Nav menu */
+  .menu-bar-top {
+    @apply w-10 h-1.5 bg-white rounded-full;
   }
 
-  @layer components {
-    /* Nav menu */
-    .menu-bar-top {
-      @apply w-10 h-1.5 bg-white rounded-full ;
-    }
+  .menu-bar-bottom {
+    @apply w-6 h-1.5 bg-white rounded-full;
+  }
 
-    .menu-bar-bottom {
-      @apply w-6 h-1.5 bg-white rounded-full
-    }
-
-    /* Hero Review Card */
-    .card-behind {
-      @apply before:absolute before:w-[204px] before:h-[100px] before:bg-white/75 before:-z-10 before:-rotate-6 before:rounded-xl
+  /* Hero Review Card */
+  .card-behind {
+    @apply before:absolute before:w-[204px] before:h-[100px] before:bg-white/75 before:-z-10 before:-rotate-6 before:rounded-xl
       before:xl:w-[304px]
-      before:xl:h-[131px]
-    }
+      before:xl:h-[131px];
+  }
 
-    /* Burger rounded corner */
-    .card-round {
-      @apply relative before:bg-[--clr-primary-02] before:absolute
+  /* Burger rounded corner */
+  .card-round {
+    @apply relative before:bg-[--clr-primary-02] before:absolute
       before:h-8 before:w-8 before:top-6 before:-left-6 before:rounded-[-200px]
       before:-rotate-90 before:-z-10;
-    }
-
-    /* https://stackoverflow.com/questions/4012085/invert-rounded-corner-in-css */
-    .card-round::before {
-      -webkit-mask-image: radial-gradient(circle 50px at 0 0, transparent 0, transparent 25px, black 21px); 
-    }
   }
+
+  /* https://stackoverflow.com/questions/4012085/invert-rounded-corner-in-css */
+  .card-round::before {
+    -webkit-mask-image: radial-gradient(
+      circle 50px at 0 0,
+      transparent 0,
+      transparent 25px,
+      black 21px
+    );
+  }
+}
