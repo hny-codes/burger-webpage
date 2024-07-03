@@ -9,7 +9,7 @@ export default function Home() {
       <HeroSection />
       <HotSection />
       <Banner />
-      <div className='bg-radial-bg sm:bg-radial-bg-sm lg:bg-radial-bg-lg'>
+      <div className='bg-radial-bg sm:bg-radial-bg-sm xl:bg-radial-bg-xl'>
         <WhoSection />
       </div>
     </main>

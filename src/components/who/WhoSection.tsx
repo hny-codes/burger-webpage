@@ -3,9 +3,11 @@ import Image from 'next/image';
 export default function WhoSection() {
   return (
     <section className='text-white text-center px-8'>
-      <div className=''>
-        <h2 className='text-3xl uppercase py-16'>— Who we are —</h2>
-        <div className='sm:flex flex-row-reverse gap-8 sm:text-left'>
+      <div className='max-w-[--max-w] mx-auto'>
+        <h2 className='text-3xl uppercase py-16 lg:text-5xl font-semibold'>
+          — Who we are —
+        </h2>
+        <div className='sm:flex flex-row-reverse gap-8 sm:text-left flex-grow'>
           <div className='relative mb-10 sm:mb-0'>
             <Image
               src={'/images/burger/persona-crop.png'}
@@ -15,7 +17,7 @@ export default function WhoSection() {
               className='relative z-20'
             />
           </div>
-          <div className='space-y-8 sm:self-center xl:mt-40'>
+          <div className='space-y-8 sm:self-center xl:mt-40 xl:text-xl xl:w-1/2'>
             <p>
               Community-focused initiatives such as partnerships with local
               farms or environmental organizations.
@@ -24,7 +26,7 @@ export default function WhoSection() {
               Social media integration for sharing photos, reviews, and engaging
               with the veggie burger community.
             </p>
-            <div className='h-1 w-24 bg-white mx-auto sm:mx-0 rounded-full'></div>
+            <div className='h-0.5 w-24 bg-white mx-auto sm:mx-0 rounded-full'></div>
             <p>
               Nutritional information provided for each menu item, catering to
               health-conscious customers.
