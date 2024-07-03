@@ -2,21 +2,20 @@ import Image from 'next/image';
 
 export default function WhoSection() {
   return (
-    <section className='text-white text-center'>
+    <section className='text-white text-center px-8'>
       <div className=''>
         <h2 className='text-3xl uppercase py-16'>— Who we are —</h2>
-        <div>
-          <div className='relative mb-10'>
+        <div className='sm:flex flex-row-reverse gap-8 sm:text-left'>
+          <div className='relative mb-10 sm:mb-0'>
             <Image
-              src={'/images/burger/burger-persona.png'}
+              src={'/images/burger/persona-crop.png'}
               alt='burger persona'
               width={829}
-              height={828}
+              height={553}
               className='relative z-20'
             />
-            <div className='absolute bg-[--clr-persona] w-full h-[70%] bottom-0 rounded-2xl'></div>
           </div>
-          <div className='space-y-8'>
+          <div className='space-y-8 sm:self-center xl:mt-40'>
             <p>
               Community-focused initiatives such as partnerships with local
               farms or environmental organizations.
@@ -25,7 +24,7 @@ export default function WhoSection() {
               Social media integration for sharing photos, reviews, and engaging
               with the veggie burger community.
             </p>
-            <div className='h-1 w-24 bg-white mx-auto rounded-full'></div>
+            <div className='h-1 w-24 bg-white mx-auto sm:mx-0 rounded-full'></div>
             <p>
               Nutritional information provided for each menu item, catering to
               health-conscious customers.
@@ -34,7 +33,10 @@ export default function WhoSection() {
               Wide range of veggie burger options including classic, gourmet,
               and customizable choices.
             </p>
-            <a href='/' className='flex items-center justify-center gap-4'>
+            <a
+              href='/'
+              className='flex items-center justify-center sm:justify-start gap-4'
+            >
               <Image
                 src={'/images/icons/send-icon.png'}
                 alt=''

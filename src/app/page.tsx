@@ -9,7 +9,7 @@ export default function Home() {
       <HeroSection />
       <HotSection />
       <Banner />
-      <div className='bg-gradient-to-r from-[--clr-primary-05] from-[70%] to-[--clr-primary-01]'>
+      <div className='bg-radial-bg sm:bg-radial-bg-sm lg:bg-radial-bg-lg'>
         <WhoSection />
       </div>
     </main>

@@ -62,7 +62,7 @@ const config = {
           'radial-gradient(500px 1500px at top right, #ffcda2 30%, #ffaf68)',
         'radial-bg-sm':
           'radial-gradient(800px 1500px at top right, #ffcda2 30%, #ffaf68)',
-        'radial-bg-lg':
+        'radial-bg-xl':
           'radial-gradient(1400px 1500px at top right, #ffcda2 30%, #ffaf68)',
       },
       borderRadius: {
