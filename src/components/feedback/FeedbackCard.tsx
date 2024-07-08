@@ -15,7 +15,7 @@ type Props = {
 };
 
 export default function FeedbackCard({ user, title, rating, quote }: Props) {
-  const decimal = rating % 2 === 0;
+  const decimal = Number.isInteger(rating);
 
   return (
     <Card className='text-[--clr-primary-05] font-medium text-center pt-12 pb-4 shadow-lg max-w-[600px] mx-auto'>
