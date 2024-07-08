@@ -49,7 +49,7 @@ export default function FeedbackCarousel() {
           ))}
         </CarouselContent>
       </div>
-      <div className='flex justify-center gap-8 mt-10'>
+      <div className='flex justify-center gap-16 mt-16'>
         <Button
           onClick={() => api?.scrollPrev()}
           className='font-bold text-xl sm:text-2xl'
