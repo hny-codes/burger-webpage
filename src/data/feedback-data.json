@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Mandy Oza",
+    "title": "Xyz Company CEO",
+    "rating": 4.5,
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+  },
+  {
+    "name": "Marthese Maudie ",
+    "title": "Xyz Company CEO",
+    "rating": 3,
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+  },
+  {
+    "name": " Narinder Rafiq ",
+    "title": "Xyz Company CEO",
+    "rating": 5,
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+  }
+]
