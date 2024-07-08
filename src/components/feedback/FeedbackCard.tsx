@@ -12,13 +12,27 @@ type Props = {
   title: string;
   rating: number;
   quote: string;
+  current: number; // index of the card
+  selected: number; // selected index of the carousel
 };
 
-export default function FeedbackCard({ user, title, rating, quote }: Props) {
+export default function FeedbackCard({
+  user,
+  title,
+  rating,
+  quote,
+  current,
+  selected,
+}: Props) {
   const decimal = Number.isInteger(rating);
 
   return (
-    <Card className='text-[--clr-primary-05] font-medium text-center pt-12 pb-4 shadow-lg max-w-[600px] mx-auto'>
+    // TODO: Add scaling on selected element
+    <Card
+      className={`text-[--clr-primary-05] font-medium text-center pt-12 pb-4 max-w-[600px] md:max-w-[800px] mx-auto px-2 md:px-20 grid grid-rows-[1f_200px_200px] min-h-[476px] h-full ${
+        current === selected && ''
+      }`}
+    >
       <CardContent className='flex flex-col justify-center items-center'>
         <div className='bg-[--clr-primary-05] rounded-full w-[95px] h-[95px] flex items-center justify-center mb-6'>
           <Image
@@ -30,7 +44,7 @@ export default function FeedbackCard({ user, title, rating, quote }: Props) {
         </div>
         <p className='sm:text-2xl'>{quote}</p>
       </CardContent>
-      <CardHeader className='space-y-2'>
+      <CardHeader className='space-y-2 self-end'>
         <div className='flex gap-2 items-center justify-center'>
           {decimal &&
             [...Array(rating)].map((_, idx) => {
