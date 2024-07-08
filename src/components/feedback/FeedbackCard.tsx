@@ -27,10 +27,9 @@ export default function FeedbackCard({
   const decimal = Number.isInteger(rating);
 
   return (
-    // TODO: Add scaling on selected element
     <Card
-      className={`text-[--clr-primary-05] font-medium text-center pt-12 pb-4 max-w-[600px] md:max-w-[800px] mx-auto px-2 md:px-20 grid grid-rows-[1f_200px_200px] min-h-[476px] h-full ${
-        current === selected && ''
+      className={`text-[--clr-primary-05] font-medium text-center pt-12 pb-4 max-w-[600px] md:max-w-[800px] mx-auto px-2 md:px-20 grid grid-rows-[1f_200px_200px] min-h-[476px] h-full card-shadow ${
+        current === selected && 'lg:scale-110'
       }`}
     >
       <CardContent className='flex flex-col justify-center items-center'>

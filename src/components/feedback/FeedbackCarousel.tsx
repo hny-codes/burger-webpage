@@ -31,7 +31,7 @@ export default function FeedbackCarousel() {
       }}
     >
       <div className='relative'>
-        <CarouselContent className='-ml-20'>
+        <CarouselContent className='-ml-20 py-20 px-8'>
           {data.map((feedback, idx) => (
             <CarouselItem
               key={idx}
@@ -49,7 +49,7 @@ export default function FeedbackCarousel() {
           ))}
         </CarouselContent>
       </div>
-      <div className='flex justify-center gap-16 mt-16'>
+      <div className='flex justify-center gap-16 mt-4 sm:mt-10'>
         <Button
           onClick={() => api?.scrollPrev()}
           className='font-bold text-xl sm:text-2xl'
