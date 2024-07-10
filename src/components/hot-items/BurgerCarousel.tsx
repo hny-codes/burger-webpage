@@ -51,7 +51,7 @@ export default function BurgerCarousel() {
         <CarouselPrevious className='w-10 xl:w-20 h-10 xl:h-20' />
         <CarouselNext className='w-10 xl:w-20 h-10 xl:h-20' />
       </Carousel>
-      <div className='flex gap-4 mt-20 justify-center'>
+      <div className='flex gap-4 mt-20 justify-center h-6'>
         {[...Array(count)].map((_, idx) => (
           <DotButton key={idx} idx={idx} api={api} current={current} />
         ))}
