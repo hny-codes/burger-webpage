@@ -33,7 +33,11 @@ export default function Navbar() {
       }`}
     >
       <div className='flex items-center justify-between p-4 lg:max-w-[--max-w] lg:mx-auto'>
-        <div className={`flex items-center gap-2 ${menu ? 'z-50' : ''}`}>
+        <div
+          className={`flex items-center gap-2 transition-all ${
+            menu ? 'z-50' : 'duration-200 z-0'
+          }`}
+        >
           <Image
             src={'/images/burger/burger.png'}
             alt='Burger'
@@ -58,7 +62,9 @@ export default function Navbar() {
         <Button
           onClick={handleMenu}
           variant={'menu'}
-          className={`flex flex-col items-end gap-4  ${menu ? 'z-50' : ''}`}
+          className={`flex flex-col items-end gap-4 transition-all ${
+            menu ? 'z-50 ' : 'duration-200 z-0'
+          }`}
         >
           <span className='menu-bar-top'></span>
           <span className='menu-bar-bottom'></span>
@@ -68,10 +74,14 @@ export default function Navbar() {
       {/* Popout menu */}
       <aside
         className={`${
-          menu ? 'block' : 'hidden'
-        } h-screen absolute bg-black/50 w-screen top-0 `}
+          menu ? 'visible' : 'invisible'
+        } h-screen absolute bg-black/50 w-screen top-0 transition-all duration-300`}
       >
-        <div className='bg-[--clr-primary-02] w-1/2 h-screen absolute right-0 max-w-[300px] lg:max-w-[500px] '>
+        <div
+          className={`${
+            menu ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
+          } bg-[--clr-primary-02] w-1/2 h-screen absolute right-0 max-w-[300px] lg:max-w-[500px] transition-all duration-300`}
+        >
           <div className='flex flex-col gap-6 px-4 lg:px-8 mt-20 font-bold'>
             <Link href={'/'}>Home</Link>
             <Link href={'/'}>Our Outlets</Link>
