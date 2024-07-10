@@ -4,6 +4,7 @@ import Banner from '@/components/banner/Banner';
 import WhoSection from '@/components/who/WhoSection';
 import FeatureSection from '@/components/features/FeatureSection';
 import FeedbackSection from '@/components/feedback/FeedbackSection';
+import Footer from '@/components/footer/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <FeatureSection />
         <FeedbackSection />
       </div>
+      <Footer />
     </main>
   );
 }

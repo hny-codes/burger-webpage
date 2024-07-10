@@ -117,6 +117,14 @@
       black 21px
     );
   }
+
+  .btn-l-border {
+    @apply relative before:absolute before:bg-[--clr-secondary-01] before:w-0.5 before:h-6 before:rounded-full before:left-0 before:top-1/2 before:-translate-y-1/2;
+  }
+
+  .small-t-border {
+    @apply relative before:absolute before:bg-white before:w-12 before:h-1 before:rounded-full before:left-3/4 sm:before:left-2/3 before:top-0 sm:before:-top-6  before:-translate-x-1/2;
+  }
 }
 
 @layer utilities {
