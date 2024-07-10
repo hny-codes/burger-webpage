@@ -30,7 +30,7 @@ export default function FeedbackCarousel() {
         loop: true,
       }}
     >
-      <div className='relative'>
+      <div className='relative cursor-pointer'>
         <CarouselContent className='-ml-20 py-20 px-8'>
           {data.map((feedback, idx) => (
             <CarouselItem
