@@ -29,3 +29,4 @@ In addition, this project also allowed me to practice incorporating the [Carouse
 - [TailwindCSS documentation](https://tailwindcss.com/docs/installation)
 - [shadcnui documentation](https://ui.shadcn.com/docs)
 - [CSS Gradient Tricks](https://css-tricks.com/radial-gradient-recipes/)
+- [Intersection Observer Hook](https://www.npmjs.com/package/react-intersection-observer)
