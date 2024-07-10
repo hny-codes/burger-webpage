@@ -28,7 +28,7 @@ export default function FeedbackCard({
 
   return (
     <Card
-      className={`text-[--clr-primary-05] font-medium text-center pt-12 pb-4 max-w-[600px] md:max-w-[800px] mx-auto px-2 md:px-20 grid grid-rows-[1f_200px_200px] min-h-[476px] h-full card-shadow ${
+      className={`text-[--clr-primary-05] font-medium text-center pt-12 pb-4 max-w-[600px] md:max-w-[800px] mx-auto px-2 md:px-20 grid grid-rows-[1f_200px_200px] min-h-[476px] h-full card-shadow transition-all duration-500 ${
         current === selected && 'lg:scale-110'
       }`}
     >
