@@ -1,10 +1,20 @@
-import React from "react";
-import { Button } from "../ui/button";
-import Image from "next/image";
+'use client';
+
+import React from 'react';
+import { Button } from '../ui/button';
+import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 export default function HeroText() {
+  const { ref, inView, entry } = useInView({ triggerOnce: true });
+
   return (
-    <div className='z-20 relative font-poppins text-white mt-8 sm:mt-0 md:mt-24 lg:mt-40 xl:mt-[19rem] px-4 md:order-1 md:self-center'>
+    <div
+      ref={ref}
+      className={`z-20 relative font-poppins text-white mt-8 sm:mt-0 md:mt-24 lg:mt-40 xl:mt-[19rem] px-4 md:order-1 md:self-center opacity-0 ${
+        inView && 'animate-hero-up'
+      }`}
+    >
       <div className=''>
         {/* Vector */}
         <div className='mb-10 flex items-center justify-around md:justify-between'>
@@ -12,35 +22,35 @@ export default function HeroText() {
             <div className='flex items-center gap-2'>
               <div className='flex items-center gap-1'>
                 <Image
-                  src={"/images/vectors/starvector.svg"}
+                  src={'/images/vectors/starvector.svg'}
                   alt=''
                   width={20}
                   height={20}
                   className='xl:w-[30px]'
                 />
                 <Image
-                  src={"/images/vectors/starvector.svg"}
+                  src={'/images/vectors/starvector.svg'}
                   alt=''
                   width={20}
                   height={20}
                   className='xl:w-[30px]'
                 />
                 <Image
-                  src={"/images/vectors/starvector.svg"}
+                  src={'/images/vectors/starvector.svg'}
                   alt=''
                   width={20}
                   height={20}
                   className='xl:w-[30px]'
                 />
                 <Image
-                  src={"/images/vectors/starvector.svg"}
+                  src={'/images/vectors/starvector.svg'}
                   alt=''
                   width={20}
                   height={20}
                   className='xl:w-[30px]'
                 />
                 <Image
-                  src={"/images/vectors/halfstar.svg"}
+                  src={'/images/vectors/halfstar.svg'}
                   alt=''
                   width={20}
                   height={20}
@@ -54,7 +64,7 @@ export default function HeroText() {
             <p className='text-lg xl:text-2xl'>5K+ Happy Review</p>
           </div>
           <Image
-            src={"/images/vectors/arrow-vector.png"}
+            src={'/images/vectors/arrow-vector.png'}
             alt=''
             width={100}
             height={100}
@@ -78,8 +88,8 @@ export default function HeroText() {
             </Button>
             <div className='flex items-center gap-2 lg:gap-4'>
               <Button
-                variant={"play"}
-                size={"play"}
+                variant={'play'}
+                size={'play'}
                 className='text-2xl pl-1 border-4 '
               >
                 ▶

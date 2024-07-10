@@ -79,10 +79,20 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        'translate-up': {
+          from: { transform: 'translateY(15rem)', opacity: '0' },
+          to: { transform: 'translateY(5rem)', opacity: '1' },
+        },
+        'hero-up': {
+          from: { transform: 'translateY(15rem)', opacity: '0' },
+          to: { transform: 'translateY(0rem)', opacity: '1' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'burger-up': 'translate-up 0.6s ease 0.5s forwards',
+        'hero-up': 'hero-up 0.6s ease forwards',
       },
     },
   },

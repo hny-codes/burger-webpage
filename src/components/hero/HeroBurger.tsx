@@ -1,8 +1,13 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 export default function HeroBurger() {
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <div className='relative font-poppins z-10 md:order-2 xl:mt-10'>
       <div className='relative z-20'>
@@ -15,14 +20,14 @@ export default function HeroBurger() {
 
         {/* Polygons */}
         <Image
-          src={"/images/vectors/poly-left-1.png"}
+          src={'/images/vectors/poly-left-1.png'}
           alt=''
           width={24}
           height={53}
           className='absolute left-36 top-[5.5rem] sm:top-32 sm:left-44 md:top-[5.5rem] md:left-36 xl:top-32 xl:left-[12.5rem]'
         />
         <Image
-          src={"/images/vectors/poly-left-2.png"}
+          src={'/images/vectors/poly-left-2.png'}
           alt=''
           width={24}
           height={53}
@@ -30,14 +35,14 @@ export default function HeroBurger() {
         />
 
         <Image
-          src={"/images/vectors/poly-right-1.png"}
+          src={'/images/vectors/poly-right-1.png'}
           alt=''
           width={66}
           height={62}
           className='absolute right-14 top-[6.5rem] sm:top-40 md:top-[6.5rem] sm:right-24 md:right-14 xl:right-24 xl:top-40'
         />
         <Image
-          src={"/images/vectors/poly-right-2.png"}
+          src={'/images/vectors/poly-right-2.png'}
           alt=''
           width={41}
           height={72}
@@ -46,11 +51,12 @@ export default function HeroBurger() {
 
         {/* Double burger image */}
         <Image
-          src={"/images/burger/double-burger.png"}
+          src={'/images/burger/double-burger.png'}
           alt='burger set'
           width={925}
           height={925}
-          className='translate-y-20'
+          className={`${inView && 'animate-burger-up'} opacity-0`}
+          ref={ref}
         />
       </div>
     </div>
