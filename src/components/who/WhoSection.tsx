@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import WhoText from './WhoText';
 
 export default function WhoSection() {
   return (
@@ -17,37 +18,7 @@ export default function WhoSection() {
               className='relative z-20'
             />
           </div>
-          <div className='space-y-8 sm:self-center xl:mt-40 xl:text-xl xl:w-1/2'>
-            <p>
-              Community-focused initiatives such as partnerships with local
-              farms or environmental organizations.
-            </p>
-            <p>
-              Social media integration for sharing photos, reviews, and engaging
-              with the veggie burger community.
-            </p>
-            <div className='h-0.5 w-24 bg-white mx-auto sm:mx-0 rounded-full'></div>
-            <p>
-              Nutritional information provided for each menu item, catering to
-              health-conscious customers.
-            </p>
-            <p>
-              Wide range of veggie burger options including classic, gourmet,
-              and customizable choices.
-            </p>
-            <a
-              href='/'
-              className='flex items-center justify-center sm:justify-start gap-4'
-            >
-              <Image
-                src={'/images/icons/send-icon.png'}
-                alt=''
-                width={48}
-                height={48}
-              />
-              <p className='underline text-2xl'>Sher</p>
-            </a>
-          </div>
+          <WhoText />
         </div>
       </div>
     </section>
